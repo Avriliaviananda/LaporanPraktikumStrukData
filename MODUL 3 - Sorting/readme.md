@@ -1,4 +1,4 @@
-# <h1 align="center">Laporan Praktikum Modul  Array</h1>
+# <h1 align="center">Laporan Praktikum Modul  Sorting</h1>
 <p align="center">Avrilia Viananda Nagita</p>
 
 ## Dasar Teori
