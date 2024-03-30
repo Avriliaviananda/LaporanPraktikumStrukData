@@ -1,52 +1,36 @@
-# <h1 align="center">Laporan Praktikum Modul  Sorting</h1>
+# <h1 align="center">Laporan Praktikum Modul Sorting</h1>
 <p align="center">Avrilia Viananda Nagita</p>
 
 ## Dasar Teori
-Array adalah objek yang menyimpan beberapa variabel dengan tipe yang sama (homogen) bertipe yang sama yang disimpan di lokasi memori yang berdekatan Untuk menemukan nilai nilai tersebut. Misalnya jika sebuah array bertipe “int", array hanya dapat menyimpan elemen integer dan tidak dapat elemen bertipe lain seperti double, float, char, dll. Namun, array itu sendiri adalah objek pada heap. Dan, jenis elemen yang dapat disimpan dalam bentuk array ditentukan oleh bahasa pemrograman. [3]
+konsep dasar sorting
 
-Array adalah salah satu tipe data terstruktur yang digunakan dalam Bahasa pemrograman. Penggunaan array dapat mempermudah penyimpan data karena array berisi komponen-komponen yang memiliki tipe data yang sama. Setiap anggota array dapat diakses melalui suatu indeks. Array mempunyai beberapa jenis seperti array 1 dimensi, array 2 dimensi dan array multidimensi, dimana masing-masing array tersebut memiliki fungsi yang berbeda dalam penggunaannya. Array 1 dimensi disebut dengan vektor, array 2 dimensi sering disebut sebagai matriks sedangkan array yang memiliki dimensi lebih dari 2(dua) yang disebut tensor. [2]
+Sorting adalah salah satu teknik yang penting dalam algoritma. Sorting adalah proses mengurutkan data, baik dari yang kecil ke yang besar (ascending) maupun dari yang besar ke yang kecil (descending). [1]
+Ada dua jenis pengurutan :
+a. Ascending (besar)
+b. Descending (kecil)
 
-Struktur data array, yang menyimpan koleksi sekuensial berukuran tetap dari jenis yang sama. Sebuah array digunakan untuk menyimpan koleksi data, namun seringkali lebih berguna untuk memikirkan sebuah array sebagai kumpulan variabel dengan tipe yang sama. [3]
-
-Array merupakan suatu variabel yang khas dan memiliki kemampuan dalam memberi tempat yang dapat memberi tampungan nilai lebih dari satudalam waktu bersamaan, apabila mempunya list item misalnya nama list sepeda motor, penyimpanan variabel biasa akan terdeklasi sebagai berikut: [1]
-
-Sepedamotor1=”Ninja”
-Sepedamotor1=”Mio” [1]
+contoh: 
+![Screenshot 2024-03-30 095753](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/c4119158-29ec-4e76-83c7-ed9c03ad2328)
 
 
-Karakteristik Array :
-1. Mempunyai batasan dari pemesanan alokasi memory ( bersifat statis)
-2. Mempunyai type data sama ( bersifat Homogen)
-3. Dapat diakses secara acak.
-4. Berurutan ( terstruktur ) [1]
+1. insertion sort
 
-berikut ini ada beberapa jenis array:
+Insertion Sort merupakan algoritma yang efisien untuk mengurutkan angka yang mempunyai jumlah elemen sedikit. Dimana Input : deretan angka sejumlah n buah dan Output ialah permutasi (pengurutan) sejumlah n angka dari input yang sudah terurut secara ascending maupun descending. Metode penyisipan (Insertion sort) bertujuan untuk menjadikan bagian sisi kiri array terurutkan sampai dengan seluruh array berhasil diurutkan. [1]
 
-1. Array Satu Dimensi
+2. bubble sort
 
-Array satu dimensi tidak lain adalah kumpulan elemen-elemen identik yang tersusun dalam satu baris, tetapi isi dari elemen tersebut boleh berbeda.  Dapat disebut juga dengan istilah vektor yang menggambarkan data dalam suatu urutan [2]
-Deklarasi : Type_Data Nama_Variabel [index] 
-Misalnya : int A[5]; 
+Bubble Sort merupakan algoritma sorting sederhana yang bekerja dengan cara bergerak berulang dari awal hingga akhir data untuk membandingkan semua elemen yang saling bersebelahan. Selama melakukan perbandingan jika ditemukan urutan elemen data yang tidak sesuai berdasarkan kondisi tertentu maka tukar ke dua posisi elemen data tersebut. [2]
 
-2. Array Dua Dimensi
+3. selection sort 
 
-Array dua dimensi yang sering digambarkan sebagai sebuah matriks merupakan perluasan dari sebuah array satu dimensi. Jika array satu dimensi hanya terdiri dari sebuah baris dengan beberapa kolom elemen maka array dua dimensi terdiri dari beberapa baris dan beberapa kolom elemen yang bertipe sama. [2]
+Selection Sort termasuk algoritma sorting sederhana yang bekerja dengan cara membandingkan semua elemen data untuk mencari nilai terkecil/terbesar disetiap perulangan, kemudian menempatkan nilai terkecil/terbesar diposisi yang tepat hingga semua elemen terurut. [2]
 
-Deklarasi : Type_Data Nama_Variabel [Index1] [index2]; 
+langkah pertama dicari data terkecil dari data pertama sampai data terakhir. Kemudian data terkecil ditukar dengan data pertama. Dengan demikian, data pertama sekarang mempunyai nilai paling kecil dibanding data yang lain. Langkah kedua, data terkecil. [3]
 
-Misal : int A[3][2];
-
-3. Array Tiga Dimensi/ multidimensi
-
-Array tiga dimensi digunakan untuk mengelola data dalam bentuk 3 dimensi atau tiga sisi. array tiga dimensi ini bisa disebut dengan array multidimensi karena lebih dari dua. array multidimensi adalah array yang nemiliki dimensi banyak dan biasanya lebih dari dua [2]
-
-Deklarasi : Type_Data Nama_Variabel [index1] [ndex2] [index3]; 
-
-Misal : int A [3][4][2];
 
 ## Guided 
 
-### 1. Array Tiga Dimensi
+### 1. Mengurutkan secara ascending untuk data numerik bertipe double menggunakan Algoritma Bubble Sort
 
 ```cpp
 #include <iostream>
@@ -95,15 +79,13 @@ int main(){
 }
 ```
 #### Output:
-![240302_00h00m06s_screenshot](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/61ec161a-ab6c-4ec1-8ca8-db61b16f826e)
-
-![240302_00h00m06s_screenshot](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/84ec165b-ac3d-4f67-a67b-bedb8c8d9e6a)
+![Screenshot 2024-03-30 104608](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/a1b8a432-5eff-4304-bd54-e62440434e83)
 
 
 #### Full code Screenshot:
-![240309_10h21m35s_screenshot](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/daea205b-7a04-496e-b265-1dc0353f77a9)
+![Screenshot (267)](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/da9ffdc6-432f-4125-9da9-6a96417e575d)
 
-### 2. Nilai Maksimal pada Array
+### 2. Mengurutkan karakter secara descending (dari terbesar hingga terkecil) menggunakan Algoritma Insertion Sort
 ```cpp
 #include <iostream>
 using namespace std;
@@ -148,12 +130,10 @@ int main () {
 }
 ```
 #### Output:
-![240302_00h00m06s_screenshot](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/0002679d-9807-4553-83c7-2dd4134bca83)
-
-
+![Screenshot 2024-03-30 104730](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/6789169f-16b6-416e-a655-144afa3fe776)
 
 #### Full code Screenshot:
-![240309_10h21m35s_screenshot](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/738108c9-bbb4-4d89-b24b-286cb6f0174d)
+![Screenshot (268)](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/47c868b6-9929-44d8-83be-1347afa480ee)
 
 ## Unguided 
 
@@ -165,44 +145,47 @@ int main () {
 using namespace std;
 
 int main() {
-  // Data IPS mahasiswa
-  float ips[] = {3.8, 2.9, 3.3, 4.0, 2.4};
-  int n = sizeof(ips) / sizeof(ips[0]);
+  // Deklarasi array
+  float ips_mhs[] = {3.8, 2.9, 3.3, 4.0, 2.4};
+  
+  // Menghitung jumlah elemen dalam array
+  int n = sizeof(ips_mhs) / sizeof(ips_mhs[0]);
 
-  // Mengurutkan IPS dengan Selection Sort
+  // Melakukan Selection Sort
   for (int i = 0; i < n - 1; i++) {
-    int max_index = i;
+    // Mencari indeks elemen minimum dari elemen i hingga akhir array
+    int min_index = i;
     for (int j = i + 1; j < n; j++) {
-      if (ips[j] > ips[max_index]) {
-        max_index = j;
+      if (ips_mhs[min_index] < ips_mhs[j]) {
+        min_index = j;
       }
     }
-    swap(ips[i], ips[max_index]);
+
+    // Menukar elemen minimum dengan elemen di awal
+    float tmp = ips_mhs[i];
+    ips_mhs[i] = ips_mhs[min_index];
+    ips_mhs[min_index] = tmp;
   }
 
-  // Menampilkan hasil
-  cout << "IPS sebelum diurutkan: ";
+  // Mencetak daftar IPS yang sudah diurutkan
+  cout << "Urutan mahasiswa IPS yang benar:" << endl;
   for (int i = 0; i < n; i++) {
-    cout << ips[i] << " ";
+    cout << ips_mhs[i] << " ";
   }
-  cout << endl;
 
-  cout << "IPS setelah diurutkan: ";
-  for (int i = 0; i < n; i++) {
-    cout << ips[i] << " ";
-  }
   cout << endl;
 
   return 0;
 }
+
 ```
 #### Output:
-![240302_00h00m06s_screenshot](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/277f2dec-03ec-455e-9e91-ddddede888b8)
+![Screenshot 2024-03-30 123900](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/ec94de51-9190-45b9-9ba4-fb77dcdde1cd)
 
 #### Full code Screenshot:
-![240309_10h21m35s_screenshot](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/3b435f3a-5ede-4d17-9a64-24a079079a90)
+![Screenshot (269)](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/b428c07e-d21b-43a1-822f-c619e579b648)
 
-Program diatas merupakan program data array yang bertujuan untuk mencari nilai ganjil dan genapnya,untuk menampilkan data array kita hanya perlu menggunakan for kemudian panggil index arraynya,untuk mencari nomor genap dan ganjil menggunakan sisa bagi.
+Program diatas merupakan program untuk mengurutkan IPS mahasiswa dari yang terbesar hingga terkecil dengan menggunakan algoritma Selection Sort. dan dihasilkan array ips_mhs berisi nilai IPK mahasiswa menggunakan algoritma Selection Sort. Algoritma ini memiliki kompleksitas waktu O(n^2). Hal ini dikarenakan perulangan for pertama dan kedua diulang sebanyak n kali.
 
 ### 2. Pak RT memiliki 10 warga dengan nama: siti, situ, sana, ana, ani, caca, cici, dida, dodo, dan dadi. Supaya mudah dalam melakukan pencarian, Pak RT akan mengurutkan namanama tersebut sesuai dengan alfabet. Buatlah program untuk membantu Pak RT dengan menggunakan algoritma Bubble Sort!
 
@@ -212,7 +195,6 @@ Program diatas merupakan program data array yang bertujuan untuk mencari nilai g
 using namespace std;
 
 int main() {
-  // Nama-nama warga
   string nama[] = {"siti", "situ", "sana", "ana", "ani", "caca", "cici", "dida", "dodo", "dadi"};
   int n = sizeof(nama) / sizeof(nama[0]);
 
@@ -220,16 +202,15 @@ int main() {
   for (int i = 0; i < n - 1; i++) {
     for (int j = 0; j < n - i - 1; j++) {
       if (nama[j] > nama[j + 1]) {
-        // Menukar elemen yang berdekatan jika tidak terurut
-        string temp = nama[j];
+        string tmp = nama[j];
         nama[j] = nama[j + 1];
-        nama[j + 1] = temp;
+        nama[j + 1] = tmp;
       }
     }
   }
 
   // Menampilkan hasil
-  cout << "Daftar nama warga setelah diurutkan: " << endl;
+  cout << "Daftar nama warga : " << endl;
   for (int i = 0; i < n; i++) {
     cout << nama[i] << " ";
   }
@@ -239,82 +220,69 @@ int main() {
 }
 ```
 #### Output:
-![240302_00h00m06s_screenshot](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/3d762723-c5bb-4903-87ed-ac3b7ad2b044)
+![Screenshot 2024-03-30 124001](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/cbb05460-b5e0-4e4a-97af-2357d7b9363d)
+
 
 #### Full code Screenshot:
-![240309_10h21m35s_screenshot](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/3898e723-01a1-46ec-8c49-a706efae20a3)
+![Screenshot (270)](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/a64bf305-c695-4de6-a9b5-c72089b82946)
 
-Program diatas merupakan program array tiga dimensi yang dimana jumlah elemennya diinputkan oleh user sebelum memasukan inputan,masukan ukuran arraynya maka kita akan diminta masukan elemennya dan elemen muncul sesuai yang diinputkan.
+
+Program ini akan melakukan sorting secara menaik (ascending) dan menurun (descending) menggunakan algoritma Bubble Sort. Algoritma ini berfungsi dengan cara menyusun elemen dalam array dari yang terkecil ke yang terbesar. Setelah proses sorting selesai, program akan menampilkan hasil sorting nama warga RT Pak RT. Kompleksitas waktu dari program ini adalah O(n^2), karena algoritma sorting yang digunakan memerlukan waktu yang lambat untuk mengurutkan sejumlah besar nama.
 
 ### 3. Buatlah program yang meminta user menginputkan suatu bilangan n dan meminta user untuk menginputkan sejumlah n karakter. Kemudian program akan melakukan sorting secara menaik (ascending) dan menurun (descending)!
 
 ```cpp
 #include <iostream>
-#include <algorithm>
 
 using namespace std;
 
-void heapify(char *karakter, int n, int i) {
-  int largest = i;
-  int left = 2 * i + 1;
-  int right = 2 * i + 2;
-
-  if (left < n && karakter[left] > karakter[largest]) {
-    largest = left;
-  }
-
-  if (right < n && karakter[right] > karakter[largest]) {
-    largest = right;
-  }
-
-  if (largest != i) {
-    swap(karakter[i], karakter[largest]);
-    heapify(karakter, n, largest);
-  }
-}
-
-void heapSort(char *karakter, int n) {
-  for (int i = n / 2 - 1; i >= 0; i--) {
-    heapify(karakter, n, i);
-  }
-
-  for (int i = n - 1; i >= 0; i--) {
-    swap(karakter[0], karakter[i]);
-    heapify(karakter, i, 0);
-  }
-}
-
 int main() {
-  // Mendapatkan jumlah karakter dari user
+  // Deklarasi variabel
   int n;
-  cout << "Masukkan jumlah karakter: ";
+  char karakter[100];
+
+  // Membaca nilai n
+  cout << "Masukkan jumlah karakter : ";
   cin >> n;
 
-  // Deklarasi array untuk menyimpan karakter
-  char karakter[n];
-
-  // Meminta user untuk memasukkan karakter
-  cout << "Masukkan " << n << " karakter: ";
+  // Membaca karakter
+  cout << "Masukkan karakter: ";
+  cin.ignore();
   for (int i = 0; i < n; i++) {
     cin >> karakter[i];
   }
 
-  // Mengurutkan karakter secara ascending
-  heapSort(karakter, n);
+  // Sorting ascending
+  for (int i = 0; i < n; i++) {
+    for (int j = i + 1; j < n; j++) {
+      if (karakter[i] > karakter[j]) {
+        char tmp = karakter[i];
+        karakter[i] = karakter[j];
+        karakter[j] = tmp;
+      }
+    }
+  }
 
-  // Menampilkan hasil pengurutan ascending
-  cout << "Karakter setelah diurutkan ascending: ";
+  // Menampilkan hasil sorting ascending
+  cout << "Karakter (Ascending): ";
   for (int i = 0; i < n; i++) {
     cout << karakter[i];
   }
   cout << endl;
 
-  // Mengurutkan karakter secara descending
-  heapSort(karakter, n);
-  reverse(karakter, karakter + n);
+  // Sorting descending
+  for (int i = 0; i < n; i++) {
+    for (int j = i + 1; j < n; j++) {
+      if (karakter[i] < karakter[j]) {
+        char tmp = karakter[i];
+        karakter[i] = karakter[j];
+        karakter[j] = tmp;
+      }
+    }
+  }
 
-  // Menampilkan hasil pengurutan descending
-  cout << "Karakter setelah diurutkan descending: ";
+  // Menampilkan hasil sorting descending
+  cout << "Karakter (Descending): ";
   for (int i = 0; i < n; i++) {
     cout << karakter[i];
   }
@@ -324,30 +292,20 @@ int main() {
 }
 ```
 #### Output:
+![Screenshot 2024-03-30 124128](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/9d9188e0-1db5-4001-a9f1-7fc103bf7fd8)
 
-### Nilai Maksimum
-![240302_00h00m06s_screenshot](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/05a04837-6bd2-404c-af92-dc976a61f522)
-
-### Nilai Minimum
-![240302_00h00m06s_screenshot](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/81ab49ab-dd95-496f-9a9b-69aa82b8192f)
-
-### Nilai Rata-Rata
-![240302_00h00m06s_screenshot](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/38c756b7-3f8a-479e-b3db-d40d90c5d9ea)
 
 #### Full code Screenshot:
-![240309_10h21m35s_screenshot](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/37695d34-592b-4a05-91f3-4fc22db05fca)
+![Screenshot (271)](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/4da575f2-3ae1-4898-a14c-671112e880ca)
 
-Program diatas merupakan program untuk mencari nilai maksimum minimum dan rata rata dari sebuah data array yang diinputkan oleh user,user memasukan jumlah elemen array terlebih dahulu, kemudian 
-user menginputkan angka yang dibutuhkan, setelah sudah diinputkan akan muncul menu yang menggunakan switch case pilihan menunnya yaitu, mencari nilai maksimum,minimum,dan rata-rata.
+Program ini menginputkan jumlah karakter dan karakter tersebut dari user, lalu melakukan sorting secara menaik (ascending) dan menurun (descending) menggunakan algoritma sorting yang sederhana. Kompleksitas waktu dari program ini adalah O(n^2), karena algoritma sorting yang digunakan memerlukan waktu yang lambat untuk mengurutkan sejumlah besar karakter.
 
 ## Kesimpulan
-Kesimpulan dari array adalah array memiliki array satu dimensi array dua dimensi dan array tiga dimensi, array satu dimensi menggunakan perulangan 
-satu kali, dua dimensi menggunakan perulangan dua kali, dan tiga dimensi menggunakan perulangan tiga kali, array tiga dimensi biasa digunakan untuk 
-matriks. Array satu dimensi penomoran indexnya menggunakan satu angka,array dua dimensi penomoran indeksnya menggunakan dua angka dan array tiga dimensi penomoran indeksnya menggunakan tiga angka.  
+Kesimpulan dari sorting adalah proses mengurutkan data, baik dari yang kecil ke yang besar (ascending) maupun dari yang besar ke yang kecil (descending). ada beberapa macam dari sorting yaitu insertion sort, bubble sort, selection sort. meskipun insertion sort, bubble sort, dan selection sort adalah algoritma sorting yang relatif sederhana, memahami dan menguasai konsep-konsep dasar dalam ketiganya penting. 
 
 ## Referensi
 [1] Afrizal Zein and Emi Sita Eriana., Algoritma dan Struktur Data, Tangerang Selatan: Unpam Press, 2022.
 
 [2] Meidyan Permata Putri, et al., ALGORITMA DAN STRUKTUR DATA, Bandung : Widina Bhakti Persada Bandung, 2022.
 
-[3] Zayid Musiafa., Struktur Data dan Implementasi Algoritma, Jakarta : Balai Pustaka, 2022.
+[3] Anita Sindar., STRUKTUR DATA DAN ALGORITMA DENGAN C++, Banten : CV.AA.RIZKY, 2019.
