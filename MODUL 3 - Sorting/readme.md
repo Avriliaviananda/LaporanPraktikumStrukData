@@ -185,7 +185,7 @@ int main() {
 #### Full code Screenshot:
 ![Screenshot (269)](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/b428c07e-d21b-43a1-822f-c619e579b648)
 
-Program diatas merupakan program untuk mengurutkan IPS mahasiswa dari yang terbesar hingga terkecil dengan menggunakan algoritma Selection Sort. dan dihasilkan array ips_mhs berisi nilai IPK mahasiswa menggunakan algoritma Selection Sort. Algoritma ini memiliki kompleksitas waktu O(n^2). Hal ini dikarenakan perulangan for pertama dan kedua diulang sebanyak n kali.
+Program diatas merupakan program untuk mengurutkan IPS mahasiswa dari yang terbesar hingga terkecil dengan menggunakan algoritma Selection Sort. dan dihasilkan array ips_mhs berisi nilai IPK mahasiswa menggunakan algoritma Selection Sort. Algoritma ini memiliki kompleksitas waktu O(n^2). Hal ini dikarenakan Selection Sort mengulangi seluruh array ips_mhs n - 1 kali. Dalam setiap iterasi, ia menghitung indeks elemen minimum dari elemen i hingga akhir array. Dalam setiap iterasi, Selection Sort melakukan n - i - 1 menukar. Jumlah pertukaran yang dibutuhkan adalah n - 1, karena elemen terakhir tidak perlu diubah. Jumlah pertukaran yang dibutuhkan adalah O(n - 1), yang menjadi O(n) dalam kasus paling buruk. Karena Selection Sort membutuhkan waktu yang lama dengan jumlah pertukaran, kompleksitas waktu pada code di atas adalah O(n^2).
 
 ### 2. Pak RT memiliki 10 warga dengan nama: siti, situ, sana, ana, ani, caca, cici, dida, dodo, dan dadi. Supaya mudah dalam melakukan pencarian, Pak RT akan mengurutkan namanama tersebut sesuai dengan alfabet. Buatlah program untuk membantu Pak RT dengan menggunakan algoritma Bubble Sort!
 
@@ -227,7 +227,7 @@ int main() {
 ![Screenshot (270)](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/a64bf305-c695-4de6-a9b5-c72089b82946)
 
 
-Program ini akan melakukan sorting secara menaik (ascending) dan menurun (descending) menggunakan algoritma Bubble Sort. Algoritma ini berfungsi dengan cara menyusun elemen dalam array dari yang terkecil ke yang terbesar. Setelah proses sorting selesai, program akan menampilkan hasil sorting nama warga RT Pak RT. Kompleksitas waktu dari program ini adalah O(n^2), karena algoritma sorting yang digunakan memerlukan waktu yang lambat untuk mengurutkan sejumlah besar nama.
+Program ini akan melakukan sorting secara menaik (ascending) dan menurun (descending) menggunakan algoritma Bubble Sort. Algoritma ini berfungsi dengan cara menyusun elemen dalam array dari yang terkecil ke yang terbesar. Setelah proses sorting selesai, program akan menampilkan hasil sorting nama warga RT Pak RT. Kompleksitas waktu dari program ini adalah O(n^2), karena, Bubble Sort mengulangi seluruh array nama n - 1 kali. Dalam setiap iterasi, ia membandingkan setiap elemen dengan elemen berikutnya dan melakukan pertukaran jika elemen lebih besar. Dalam setiap iterasi, Bubble Sort melakukan n - i - 1 menukar. Jumlah pertukaran yang dibutuhkan adalah n - 1, karena elemen terakhir tidak perlu diubah. Jumlah pertukaran yang dibutuhkan adalah O(n - 1), yang menjadi O(n) dalam kasus paling buruk. Karena Bubble Sort membutuhkan waktu yang lama dengan jumlah pertukaran, kompleksitas waktu pada code di atas adalah O(n^2).
 
 ### 3. Buatlah program yang meminta user menginputkan suatu bilangan n dan meminta user untuk menginputkan sejumlah n karakter. Kemudian program akan melakukan sorting secara menaik (ascending) dan menurun (descending)!
 
@@ -298,7 +298,7 @@ int main() {
 #### Full code Screenshot:
 ![Screenshot (271)](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/4da575f2-3ae1-4898-a14c-671112e880ca)
 
-Program ini menginputkan jumlah karakter dan karakter tersebut dari user, lalu melakukan sorting secara menaik (ascending) dan menurun (descending) menggunakan algoritma sorting yang sederhana. Kompleksitas waktu dari program ini adalah O(n^2), karena algoritma sorting yang digunakan memerlukan waktu yang lambat untuk mengurutkan sejumlah besar karakter.
+Program ini menginputkan jumlah karakter dan karakter tersebut dari user, lalu melakukan sorting secara menaik (ascending) dan menurun (descending) menggunakan algoritma sorting yang sederhana. Kompleksitas waktu dari program ini adalah O(n^2), karena Bubble Sort mengulangi seluruh array karakter n - 1 kali. Dalam setiap iterasi, ia membandingkan setiap elemen dengan elemen berikutnya dan melakukan pertukaran jika elemen lebih besar. Dalam setiap iterasi, Bubble Sort melakukan n - i - 1 menukar. Jumlah pertukaran yang dibutuhkan adalah n - 1, karena elemen terakhir tidak perlu diubah. Jumlah pertukaran yang dibutuhkan adalah O(n - 1), yang menjadi O(n) dalam kasus paling buruk. Karena Bubble Sort membutuhkan waktu yang lama dengan jumlah pertukaran, kompleksitas waktu pada code di atas adalah O(n^2).
 
 ## Kesimpulan
 Kesimpulan dari sorting adalah proses mengurutkan data, baik dari yang kecil ke yang besar (ascending) maupun dari yang besar ke yang kecil (descending). ada beberapa macam dari sorting yaitu insertion sort, bubble sort, selection sort. meskipun insertion sort, bubble sort, dan selection sort adalah algoritma sorting yang relatif sederhana, memahami dan menguasai konsep-konsep dasar dalam ketiganya penting. 
