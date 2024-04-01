@@ -85,6 +85,8 @@ int main(){
 #### Full code Screenshot:
 ![Screenshot (267)](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/da9ffdc6-432f-4125-9da9-6a96417e575d)
 
+program diatas unutk mengurutkan secara ascending untuk data numerik bertipe double menggunakan Algoritma Bubble Sort. dan dihasilkan urutan sebelum dan setelah sorting secara ascending(dari yang terkecil ke yang terbesar). Kompleksitas waktu pada code di atas adalah O(n^2), dimana n adalah jumlah elemen dalam array a. Hal ini disebabkan karena penggunaan algoritma Bubble Sort, yang membutuhkan waktu yang lama dengan jumlah elemen dalam array. Dalam hal ini, waktu yang dibutuhkan untuk menyortir bilangan akan meningkat dengan kubiknya jumlah bilangan.
+
 ### 2. Mengurutkan karakter secara descending (dari terbesar hingga terkecil) menggunakan Algoritma Insertion Sort
 ```cpp
 #include <iostream>
@@ -134,6 +136,8 @@ int main () {
 
 #### Full code Screenshot:
 ![Screenshot (268)](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/47c868b6-9929-44d8-83be-1347afa480ee)
+
+program diatas untuk mengurutkan karakter secara descending (dari terbesar hingga terkecil) menggunakan Algoritma Insertion Sort. dan dihasilkan urutan karakter sesuai dengan dari yang terbesar ke yang terkecil. Kompleksitas waktu pada code di atas adalah O(n^2), dimana n adalah jumlah elemen dalam array a. Hal ini disebabkan karena penggunaan algoritma Insertion Sort, yang membutuhkan waktu yang lama dengan jumlah elemen dalam array. Dalam hal ini, waktu yang dibutuhkan untuk menyortir karakter akan meningkat dengan kubiknya jumlah karakter.
 
 ## Unguided 
 
