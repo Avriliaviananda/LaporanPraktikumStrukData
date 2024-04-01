@@ -296,11 +296,12 @@ int main() {
 }
 ```
 #### Output:
-![Screenshot 2024-03-30 124128](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/9d9188e0-1db5-4001-a9f1-7fc103bf7fd8)
+![Screenshot 2024-04-01 111609](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/7e0284e3-5b1e-4fd5-aff7-37333b5f0f7e)
 
 
 #### Full code Screenshot:
-![Screenshot (271)](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/4da575f2-3ae1-4898-a14c-671112e880ca)
+![Screenshot (280)](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/eb0ce447-c977-4fa3-a4cc-ea80682f3c49)
+
 
 Program ini menginputkan jumlah karakter dan karakter tersebut dari user, lalu melakukan sorting secara menaik (ascending) dan menurun (descending) menggunakan algoritma sorting yang sederhana. Kompleksitas waktu dari program ini adalah O(n^2), karena Bubble Sort mengulangi seluruh array karakter n - 1 kali. Dalam setiap iterasi, ia membandingkan setiap elemen dengan elemen berikutnya dan melakukan pertukaran jika elemen lebih besar. Dalam setiap iterasi, Bubble Sort melakukan n - i - 1 menukar. Jumlah pertukaran yang dibutuhkan adalah n - 1, karena elemen terakhir tidak perlu diubah. Jumlah pertukaran yang dibutuhkan adalah O(n - 1), yang menjadi O(n) dalam kasus paling buruk. Karena Bubble Sort membutuhkan waktu yang lama dengan jumlah pertukaran, kompleksitas waktu pada code di atas adalah O(n^2).
 
