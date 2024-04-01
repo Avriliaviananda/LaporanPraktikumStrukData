@@ -30,7 +30,7 @@ int main() {
   }
 
   // Menampilkan hasil sorting ascending
-  cout << "Karakter (Ascending): ";
+  cout << "Urutan karakter setelah ascending sort: ";
   for (int i = 0; i < n; i++) {
     cout << karakter[i];
   }
@@ -48,7 +48,7 @@ int main() {
   }
 
   // Menampilkan hasil sorting descending
-  cout << "Karakter (Descending): ";
+  cout << "Urutan karakter setelah descending sort: ";
   for (int i = 0; i < n; i++) {
     cout << karakter[i];
   }

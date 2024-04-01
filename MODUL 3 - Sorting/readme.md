@@ -268,7 +268,7 @@ int main() {
   }
 
   // Menampilkan hasil sorting ascending
-  cout << "Karakter (Ascending): ";
+  cout << "Urutan karakter setelah ascending sort: ";
   for (int i = 0; i < n; i++) {
     cout << karakter[i];
   }
@@ -286,7 +286,7 @@ int main() {
   }
 
   // Menampilkan hasil sorting descending
-  cout << "Karakter (Descending): ";
+  cout << "Urutan karakter setelah descending sort: ";
   for (int i = 0; i < n; i++) {
     cout << karakter[i];
   }
@@ -296,11 +296,13 @@ int main() {
 }
 ```
 #### Output:
-![Screenshot 2024-04-01 111609](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/7e0284e3-5b1e-4fd5-aff7-37333b5f0f7e)
+![Screenshot 2024-04-01 112531](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/2ed4aca9-c281-4b46-8ba6-e66c8f0f0c67)
+
 
 
 #### Full code Screenshot:
-![Screenshot (280)](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/eb0ce447-c977-4fa3-a4cc-ea80682f3c49)
+![Screenshot (281)](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/5da27b51-2437-40cd-a5f6-347a292b3ac4)
+
 
 
 Program ini menginputkan jumlah karakter dan karakter tersebut dari user, lalu melakukan sorting secara menaik (ascending) dan menurun (descending) menggunakan algoritma sorting yang sederhana. Kompleksitas waktu dari program ini adalah O(n^2), karena Bubble Sort mengulangi seluruh array karakter n - 1 kali. Dalam setiap iterasi, ia membandingkan setiap elemen dengan elemen berikutnya dan melakukan pertukaran jika elemen lebih besar. Dalam setiap iterasi, Bubble Sort melakukan n - i - 1 menukar. Jumlah pertukaran yang dibutuhkan adalah n - 1, karena elemen terakhir tidak perlu diubah. Jumlah pertukaran yang dibutuhkan adalah O(n - 1), yang menjadi O(n) dalam kasus paling buruk. Karena Bubble Sort membutuhkan waktu yang lama dengan jumlah pertukaran, kompleksitas waktu pada code di atas adalah O(n^2).
