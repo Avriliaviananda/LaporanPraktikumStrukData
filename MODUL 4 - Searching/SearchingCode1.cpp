@@ -2,7 +2,7 @@
 using namespace std;
 int main(){
     int n = 10;
-    int data[n] = {9, 4, 1, 7, 5, 12, 4, 10};
+    int data[n] = {9, 4, 1, 7, 5, 12, 4, 13, 4, 10};
     int cari = 10;
     bool ketemu = false;
     int i;

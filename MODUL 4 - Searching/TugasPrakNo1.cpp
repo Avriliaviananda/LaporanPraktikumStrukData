@@ -1,42 +1,52 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 
-int main() {
-  string kalimat;
-  char huruf;
-  int low, high, mid;
+// Fungsi untuk mencari huruf dalam string menggunakan binary search
+bool binarySearch(const string& str, char target) {
+    int left = 0;
+    int right = str.length() - 1;
 
-  // Input kalimat
-  cout << "Masukkan kalimat: ";
-  getline(cin, kalimat);
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
 
-  // Input huruf yang ingin dicari
-  cout << "Masukkan huruf yang ingin dicari: ";
-  cin >> huruf;
-
-  // Mencari index huruf dengan binary search
-  low = 0;
-  high = kalimat.length() - 1;
-
-  while (low <= high) {
-    mid = (low + high) / 2;
-
-    if (kalimat[mid] == huruf) {
-      break;
-    } else if (kalimat[mid] < huruf) {
-      low = mid + 1;
-    } else {
-      high = mid - 1;
+        if (str[mid] == target)
+            return true;
+        else if (str[mid] < target)
+            left = mid + 1;
+        else
+            right = mid - 1;
     }
-  }
 
-  // Menampilkan hasil pencarian
-  if (low <= high) {
-    cout << "Huruf '" << huruf << "' ditemukan pada index " << mid << endl;
-  } else {
-    cout << "Huruf '" << huruf << "' tidak ditemukan pada kalimat" << endl;
-  }
+    return false;
+}
 
-  return 0;
+int main() {
+    string kalimat;
+    char target;
+
+    cout << "Masukkan kalimat: ";
+    getline(cin, kalimat);
+
+    // Mengubah kalimat menjadi huruf kecil untuk memudahkan pencarian
+    for (char &ch : kalimat) {
+        if (ch >= 'A' && ch <= 'Z') {
+            ch += 'a' - 'A';
+        }
+    }
+
+    cout << "Masukkan huruf yang ingin dicari: ";
+    cin >> target;
+    cin.ignore();
+
+    // Mencari huruf menggunakan binary search
+    bool ditemukan = binarySearch(kalimat, target);
+
+    if (ditemukan)
+        cout << "Huruf '" << target << "' ditemukan dalam kalimat." << endl;
+    else
+        cout << "Huruf '" << target << "' tidak ditemukan dalam kalimat." << endl;
+
+    return 0;
 }
