@@ -26,7 +26,7 @@ pencarian dengan membagi dua bagian data kemudian
 membandingkan isi data bagian pertama atau bagian kedua 
 dengan data yang akan dicari. Pada metode ini membutuhkan 
 nilai indeks terkecil dan terbesar untuk dijumlahkan kemudian 
-dibagi dua. Pencarian bagi dua (binary search) hanya bisa 
+dibagi dua.[3] Pencarian bagi dua (binary search) hanya bisa 
 dilakukan pada data yang sudah urut. Metode ini lebih efisien 
 dibandingkan dengan metode pencarian sequential search atau 
 pencarian beruntun. Pencarian Biner sebagai algoritma pencarian yang digunakan dalam array yang diurutkan dengan berulang kali membagi interval pencarian menjadi dua. Ide pencarian biner adalah menggunakan informasi bahwa array diurutkan dan mengurangi kompleksitas waktu ke O (log N). [1]
@@ -331,11 +331,11 @@ int main() {
 Program ini menunjukkan contoh penerapan algoritma sequential search dalam bahasa C++. Program ini dapat digunakan untuk menghitung banyaknya nilai tertentu dalam sebuah array. Program pertama-tama menginisialisasi array data yang berisi angka-angka dan target yang ingin dicari (angka 4). Kemudian, program menghitung banyaknya angka 4 dalam array data menggunakan algoritma sequential search. Algoritma sequential search mencari nilai target dalam array data dengan cara membandingkan nilai target dengan setiap elemen array.
 
 ## Kesimpulan
-Kesimpulan dari Pencarian (searching) pada struktur data adalah proses untuk menemukan elemen tertentu (target) dari kumpulan elemen lainnya. Kumpulan elemen ini bisa berupa array, list, linked list, tree, dan lain sebagainya. Ada dua algoritma pencarian utama yang umum digunakan: Pencarian Berurutan (Sequential Search), Pencarian Bagi Dua (Binary Search) 
+Kesimpulan dari Pencarian (searching) pada struktur data adalah proses untuk menemukan elemen tertentu (target) dari kumpulan elemen lainnya. Kumpulan elemen ini bisa berupa array, list, linked list, tree, dan lain sebagainya. Ada dua algoritma pencarian utama yang umum digunakan: Pencarian Berurutan (Sequential Search) Sequential search adalah teknik pencarian data yang dilakukan dengan cara membandingkan setiap elemen data satu per satu, mulai dari elemen pertama hingga elemen yang dicari ditemukan, sedangkan Pencarian Bagi Dua (Binary Search) Binary Search merupakan sebuah teknik pencarian data dengancara berulang kali membagi separuh dari jumlah data yang dicari sampai sehingga memperkecil lokasi pencarian menjadi satu data. 
 
 ## Referensi
 [1] Afrizal Zein and Emi Sita Eriana., Algoritma dan Struktur Data, Tangerang Selatan: Unpam Press, 2022.
 
 [2] Meidyan Permata Putri, et al., ALGORITMA DAN STRUKTUR DATA, Bandung : Widina Bhakti Persada Bandung, 2022.
 
-
+[3] Anita Sindar., STRUKTUR DATA DAN ALGORITMA DENGAN C++, Banten : CV.AA.RIZKY, 2019.
