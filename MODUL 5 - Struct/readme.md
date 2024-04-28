@@ -149,7 +149,8 @@ int main() {
 
 
 #### Full code Screenshot:
-![Screenshot (292)](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/d70964f8-2aa6-437a-a1fe-f4dc7a8c685b)
+![Screenshot (297)](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/1622e6dd-4e10-4e7c-b5ce-e9de15de77a6)
+
 
 
 Kode di atas adalah program C++ yang mendefinisikan beberapa struktur (struct) untuk merepresentasikan informasi mengenai hewan, hewan darat, dan hewan laut. Program kemudian membuat beberapa variabel menggunakan struktur-struktur tersebut dan menginisialisasi nilai-nilai di dalamnya.
