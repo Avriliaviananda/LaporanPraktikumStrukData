@@ -1506,11 +1506,11 @@ i. Hapus data akhir
 
 j. Tampilkan seluruh data
 #### Output:
-![Screenshot (305)](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/cbcab0ce-c6ea-4156-823b-0efbc33b1052)
+![Screenshot 2024-04-27 200439](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/e45d76b7-cb2d-4959-8bdc-0af41e4c883f)
 
 
 #### Full code Screenshot:
-![Screenshot (295)](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/83847292-12d0-48f7-ba27-6f3bdb639993)
+![Screenshot (305)](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/cbcab0ce-c6ea-4156-823b-0efbc33b1052)
 
 ```cpp
 #include <iostream>
