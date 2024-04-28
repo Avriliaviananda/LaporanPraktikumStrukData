@@ -1092,17 +1092,17 @@ int main() {
 
 2. Tampilan operasi tambah
 
-   tambah depan
+tambah depan
 ![Screenshot 2024-04-27 184021](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/4c2438f8-214e-43dc-9240-c50176b2c3dd)
 
-    tambah tengah
+tambah tengah
 ![Screenshot 2024-04-27 184406](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/eca43048-c8ae-45ea-befa-e64b80fcef99)
 
 
 3. Tampilan operasi hapus
 ![Screenshot 2024-04-27 192357](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/b910a9be-22b4-4dd5-a35b-7a66e2088b01)
 
-     ![Screenshot 2024-04-27 192419](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/5ee268ea-eb6e-454f-8829-8a6f48dee0dc)
+ ![Screenshot 2024-04-27 192419](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/5ee268ea-eb6e-454f-8829-8a6f48dee0dc)
 
 4. Tampilan operasi ubah
 ![Screenshot 2024-04-27 192846](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/48bb3d67-37f1-463f-9423-b285be3527fd)
@@ -1440,7 +1440,7 @@ int main() {
 
 4. Tampilan Data Mahasiswa
 
-   ![Screenshot 2024-04-27 194618](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/e33cfea9-f2af-4898-8aff-8877f7a04449)
+![Screenshot 2024-04-27 194618](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/e33cfea9-f2af-4898-8aff-8877f7a04449)
 
 
 #### Full code Screenshot:
@@ -1817,7 +1817,7 @@ int main() {
 }
 ```
 
-output disini sama seperti nomer 2 tetapi 
+untuk mendapatkan output tersebut kita menggunakan operasi ubah depan, ubah belakang, ubah tengah, tambah depan, tambah belakang, tambah tengah, hapus tengah, hapus depan, hapus belakang, kemudian tampilkan semua data sesuai dengan perintah pada soal.
 
 ## Kesimpulan
 Kesimpulan dari Linked list dalam struktur data yang berisi objek data yang dihubungkan oleh tautan. Setiap Linked list terdiri dari node yang memiliki bidang data dan referensi ke node berikutnya dalam daftar tertaut. adapun jenis-jenis linked list yaitu single linked list terdiri dari elemen-elemen individu, dimana masing masing dihubungkan dengan pointer tunggal. double linked list yaitu elemen-elemen dihubungkan dengan dua pointer dalam satu elemen. Struktur ini menyebabkan list melintas baik ke depan maupun ke belakang. sedangkan circular linked list adalah bentuk lain dari linked list yang memberikan fleksibilitas dalam melewatkan elemen. Circular list bisa berupa single linked list atau double linked list, tetapi tidak mempunyai tail.

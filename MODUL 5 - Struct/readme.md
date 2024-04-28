@@ -3,35 +3,27 @@
 
 ## Dasar Teori
 
-Searching
+struktur (struct)
 
-Searching (pencarian) pada struktur data mengacu pada proses 
-algoritmik untuk memeriksa, menemukan, mengambil posisi elemen tertentu (target) dari kumpulan elemen di dalam struktur data. Kumpulan elemen dapat berupa array, list, linked list, tree, dan lain sebagainya. Berdasarkan jenis operasinya, dua algoritma pencarian yang dibahas pada subbab ini yaitu Sequential Search dan Binary Search pada data array. [2]
+Struktur adalah tipe data terdefinisi pengguna yang digunakan untuk menggabungkan beberapa tipe data dasar menjadi satu unit. Struktur dapat digunakan untuk mewakili berbagai hal, seperti:
+Data dari suatu objek, seperti data dari suatu buku, yaitu judul, pengarang, penerbit, dan tahun terbit. [1]
+Data dari suatu transaksi, seperti data dari suatu pembelian, yaitu tanggal, jumlah barang, dan total harga.
+Data dari suatu permainan, seperti data dari suatu pemain, yaitu nama, usia, dan tingkat kesulitan.
+Struktur dapat digunakan untuk membuat kode yang lebih ringkas dan mudah dibaca. Misalnya, jika kita ingin menyimpan data dari suatu buku, kita dapat menggunakan struktur sebagai berikut: [2]
+![image](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/85e9fc34-d9c5-4fc3-b9b5-2094f0d51f65)
 
-1. Sequential Search
+Struktur ini memiliki empat anggota, yaitu:
+1. judul: tipe data std::string untuk menyimpan judul buku.
 
-Sequential Search (pencarian berurutan) dikenal juga sebagai 
-pencarian linier. Sequential Search merupakan algoritma pencarian paling dasar dan paling sederhana yang bekerja menggunakan pendekatan brute force, mencoba segala kemungkinan yang ada hingga target yang diinginkan ditemukan. Sebagai contoh, mencari nilai 36 dari data array {12, 
-7, 30, 28, 2, 19, 36, 21, 16, 9}. Sequential Search dimulai dengan membandingkan/mencocokkan 36 dengan elemen pertama/index[0] yaitu 12, karena 12 tidak sesuai dengan kriteria pencarian (12 != 36) maka dilanjutkan dengan membandingkan 36 dengan elemen berikutnya hingga ditemukan elemen yang cocok, yaitu pada index[6] dimana 36 == 36. [2]
+2. pengarang: tipe data std::string untuk menyimpan nama pengarang buku.
 
-![Screenshot 2024-04-06 131806](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/9ce25adb-d968-4ed6-aeb3-a867bf50d770)
+3. penerbit: tipe data std::string untuk menyimpan nama penerbit buku.
 
-Sequential Search dideskripsikan pada class Sequential Search (baris 6) sedangkan proses pencarian data dilakukan didalam method search (baris 7). Method search menerima kunci pencarian dari pengguna (baris 12) kemudian menggunakan perulangan (baris 13) untuk membandingkan kunci pencarian dengan semua elemen pada array (baris 15). Program berhenti ketika elemen telah ditemukan (baris 16) atau ketika semua 
-elemen telah selesai dibandingkan (baris 20). Output program dapat dilihat pada Gambar, pada output dijabarkan tahapan proses pencarian dan hasil pencarian apabila elemen ditemukan dan tidak ditemukan. [2]
+4. tahun_terbit: tipe data int untuk menyimpan tahun terbit buku. [2]
 
-2. Binary Search
+Struktur adalah tipe data terdefinisi pengguna yang digunakan untuk menggabungkan beberapa tipe data dasar menjadi satu unit. Struktur dapat digunakan untuk membuat kode yang lebih ringkas dan mudah dibaca. [3]
 
-Pencarian bagidua (binary search) adalah proses 
-pencarian dengan membagi dua bagian data kemudian 
-membandingkan isi data bagian pertama atau bagian kedua 
-dengan data yang akan dicari. Pada metode ini membutuhkan 
-nilai indeks terkecil dan terbesar untuk dijumlahkan kemudian 
-dibagi dua.[3] Pencarian bagi dua (binary search) hanya bisa 
-dilakukan pada data yang sudah urut. Metode ini lebih efisien 
-dibandingkan dengan metode pencarian sequential search atau 
-pencarian beruntun. Pencarian Biner sebagai algoritma pencarian yang digunakan dalam array yang diurutkan dengan berulang kali membagi interval pencarian menjadi dua. Ide pencarian biner adalah menggunakan informasi bahwa array diurutkan dan mengurangi kompleksitas waktu ke O (log N). [1]
 
-![Screenshot 2024-04-06 132307](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/ea20f49d-d8ec-4fb7-b5af-25b4e948c053)
 
 
 ## Guided 
@@ -217,8 +209,7 @@ int main() {
 #### Full code Screenshot:
 ![Screenshot (301)](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/83a18eda-3c84-4c1b-bdd2-6cc5d35e7730)
 
-
-Program pertama-tama mengubah kalimat menjadi huruf kecil untuk memudahkan pencarian. Kemudian, program menggunakan algoritma binary search untuk mencari huruf "a" dalam kalimat "aku cantik". Algoritma binary search membagi kalimat menjadi dua bagian dan terus membagi bagian yang lebih kecil hingga menemukan huruf yang dicari. Dalam hal ini, algoritma akan menemukan huruf "a" pada indeks ke-1 dalam kalimat "aku cantik".
+Program tersebut adalah program C++ yang menggunakan struktur (struct) untuk merepresentasikan data buku. Di dalamnya, terdapat sebuah struktur bernama "buku" yang memiliki beberapa atribut seperti judul buku, pengarang, penerbit, jumlah halaman, dan harga buku. Program ini kemudian menginisialisasi variabel dataBuku dengan tipe struct buku. program tersebut sama seperti guided pertama, tetapi pada soal dimita untuk memodifikasi supaya setiap item yang terdapat pada struct buku berupa array yang berukuran 5. program ini akan menampilkan informasi lima buku yang memiliki judul "Is it Bad or Good1" sampai "Is it Bad or Good5", dengan pengarang, penerbit, jumlah halaman, dan harga buku yang sama untuk setiap buku.
 
 ### 2. Apa yang terjadi jika deklarasi variabel struct yang dibuat pada tugas guided I, berjenis Array. Bagaimana cara mengisi data dan menampilkannya ?
 
@@ -286,16 +277,17 @@ int main() {
 
 
 
-Program ini menunjukkan contoh penerapan algoritma penghitungan dalam bahasa C++. Program ini dapat digunakan untuk menghitung banyaknya huruf vokal dalam sebuah kalimat. Program pertama-tama mengubah kalimat menjadi huruf kecil untuk memudahkan pengecekan. Kemudian, program menghitung banyaknya huruf vokal dalam kalimat "kamu jelek". Huruf vokal dalam kalimat tersebut adalah "a", "u", dan "e".
+Program ini meminta pengguna untuk memasukkan data untuk lima buku. Setiap entri data termasuk judul buku, pengarang, penerbit, jumlah halaman, dan harga buku. Pengguna diminta untuk memasukkan data satu per satu untuk setiap buku.
+Setelah pengguna memasukkan data untuk semua lima buku, program akan menampilkan informasi yang dimasukkan oleh pengguna untuk setiap buku.
 
 
 
 ## Kesimpulan
-Kesimpulan dari Pencarian (searching) pada struktur data adalah proses untuk menemukan elemen tertentu (target) dari kumpulan elemen lainnya. Kumpulan elemen ini bisa berupa array, list, linked list, tree, dan lain sebagainya. Ada dua algoritma pencarian utama yang umum digunakan: Pencarian Berurutan (Sequential Search) Sequential search adalah teknik pencarian data yang dilakukan dengan cara membandingkan setiap elemen data satu per satu, mulai dari elemen pertama hingga elemen yang dicari ditemukan, sedangkan Pencarian Bagi Dua (Binary Search) Binary Search merupakan sebuah teknik pencarian data dengancara berulang kali membagi separuh dari jumlah data yang dicari sampai sehingga memperkecil lokasi pencarian menjadi satu data. 
+Kesimpulan dari Struct dalam bahasa C++ adalah tipe data bentukan yang terdiri dari kumpulan tipe data lain. Mirip dengan array, struct memungkinkan pengelompokan variabel dengan tipe data yang berbeda. Dalam struct, kita dapat mendefinisikan komponen-komponen data yang berbeda tipe dalam satu struktur. Struct digunakan untuk membuat tipe data baru yang dapat menampung informasi atau data dengan format tertentu. Dalam C++, struktur dideklarasikan menggunakan keyword struct diikuti dengan nama struktur, di mana variabel-variabel struktur dideklarasikan dalam kurung kurawal {}. 
 
 ## Referensi
-[1] Afrizal Zein and Emi Sita Eriana., Algoritma dan Struktur Data, Tangerang Selatan: Unpam Press, 2022.
+[1] Windha Mega Pradnya Dhuhita., Struktur Data C++, Jakarta: Wlex Media Komputindo, 2020.
 
-[2] Meidyan Permata Putri, et al., ALGORITMA DAN STRUKTUR DATA, Bandung : Widina Bhakti Persada Bandung, 2022.
+[2] Reva Ragam, Algoritma dan Struktur Data 1, Jakarta : Esa Unggul, 2022.
 
 [3] Anita Sindar., STRUKTUR DATA DAN ALGORITMA DENGAN C++, Banten : CV.AA.RIZKY, 2019.
