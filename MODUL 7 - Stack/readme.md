@@ -137,7 +137,7 @@ void destroyArrayBuku() {
 
 void cetakArrayBuku() {
     if (isEmpty()) {
-        cout << "Tidak ada data yang 70 dicetak" << endl;
+        cout << "Tidak ada data yang dicetak" << endl;
     } else {
         for (int i = top - 1; i >= 0; i--) {
             cout << arrayBuku[i] << endl;
@@ -176,7 +176,8 @@ int main() {
 
 ```
 #### Output:
-![Screenshot 2024-05-03 215517](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/bdb17217-bec4-41d3-978a-dbc336ae59e4)
+![Screenshot 2024-05-06 102013](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/8efad263-0eb6-424d-89f8-536c583a1461)
+
 
 
 #### Full code Screenshot:
