@@ -168,93 +168,148 @@ int main() {
 ![Screenshot (313)](https://github.com/Avriliaviananda/Struktur-Data-Teori/assets/161323061/8045521b-34d7-4ddf-8b77-0d76f10264b1)
 
 
-Program ini terdapat beberapa operasi seperti menambahkan data ke stack, menghapus data dari stack, melihat elemen teratas, menghitung jumlah elemen, mengubah nilai elemen pada posisi tertentu, dan menghapus stack.
+Kodingan di atas adalah implementasi dari antrian (queue) menggunakan array statis di bahasa C++. Di dalam kodingan tersebut, terdapat sebuah array queueTeller dengan ukuran maksimal 5 elemen. Array ini digunakan untuk menyimpan elemen antrian.
 
-penjelasan output:
+Fungsi isFull() digunakan untuk memeriksa apakah antrian sudah penuh atau belum. Jika back sama dengan maksimalQueue, maka antrian sudah penuh dan fungsi akan mengembalikan nilai true. Jika tidak, fungsi akan mengembalikan nilai false.
 
--Data di stack: Program menampilkan semua judul buku yang telah ditambahkan ke stack, yaitu "Kalkulus", "Struktur Data", "Matematika Diskrit", "Dasar Multimedia", dan "Inggris".
+Fungsi isEmpty() digunakan untuk memeriksa apakah antrian kosong atau tidak. Jika back sama dengan 0, maka antrian kosong dan fungsi akan mengembalikan nilai true. Jika tidak, fungsi akan mengembalikan nilai false.
 
--Pemeriksaan penuh dan kosong stack: Program memeriksa apakah stack penuh dan kosong. Pada awalnya, stack tidak penuh dan tidak kosong, sehingga outputnya adalah 1 untuk penuh dan 0 untuk kosong.
+Fungsi enqueueAntrian(string data) digunakan untuk menambahkan elemen ke antrian. Elemen baru akan ditambahkan ke posisi back dari array queueTeller. Jika antrian sudah penuh, fungsi akan mencetak pesan "Antrian Penuh". Jika antrian kosong, elemen baru akan ditambahkan ke posisi 0 dari array queueTeller.
 
--Melihat elemen ke-2: Program menampilkan elemen ke-2 dari atas stack, yaitu "Matematika Diskrit".
+Fungsi dequeueAntrian() digunakan untuk menghapus elemen pertama dari antrian. Jika antrian kosong, fungsi akan mencetak pesan "Antrian kosong". Jika antrian tidak kosong, elemen pertama akan dihapus dan semua elemen lainnya akan digeser ke posisi sebelumnya.
 
--Menghapus elemen: Program mencoba menghapus elemen dari stack, tetapi karena stack tidak kosong, program mencetak pesan "Tidak ada data yang dihapus".
+Fungsi countQueue() digunakan untuk menghitung jumlah elemen yang ada di antrian. Fungsi clearQueue() digunakan untuk menghapus semua elemen dari antrian. Jika antrian kosong, fungsi akan mencetak pesan "Antrian kosong". Jika antrian tidak kosong, semua elemen akan dihapus dan di-set ke string kosong.
 
--Menghitung jumlah elemen: Program menghitung jumlah elemen di stack, yaitu 4.
+Fungsi viewQueue() digunakan untuk menampilkan semua elemen yang ada di antrian. Jika antrian kosong, fungsi akan mencetak pesan "Antrian kosong". Jika antrian tidak kosong, semua elemen akan ditampilkan dengan nomor urut.
 
--Mengubah nilai elemen ke-2: Program mengubah nilai elemen ke-2 dari "Matematika Diskrit" menjadi "Bahasa Jerman".
-
--Mencetak stack setelah perubahan: Program mencetak semua elemen di stack setelah perubahan, yaitu "Kalkulus", "Struktur Data", "Bahasa Jerman", "Dasar Multimedia".
-
--Menghapus stack: Program menghapus semua elemen dari stack dan mengembalikan indeks top ke nol.
-
--Mencetak stack setelah dihapus: Program mencetak stack setelah dihapus, tetapi karena stack kosong, program mencetak pesan "Tidak ada data yang dicetak".
-
+Di dalam fungsi main(), terdapat beberapa contoh penggunaan fungsi-fungsi yang telah dijelaskan sebelumnya. Elemen "Andi" dan "Maya" ditambahkan ke antrian, kemudian antrian ditampilkan dan dihitung jumlahnya. Elemen pertama dihapus dari antrian, kemudian antrian ditampilkan dan dihitung jumlahnya lagi. Semua elemen dihapus dari antrian, kemudian antrian ditampilkan dan dihitung jumlahnya lagi.
 
 ## Unguided 
 
-### 1. Buatlah program untuk menentukan apakah kalimat tersebut yang diinputkan dalam program stack adalah palindrom/tidak. Palindrom kalimat yang dibaca dari depan dan belakang sama. Jelaskan bagaimana cara kerja programnya.
+### 1. Ubahlah penerapan konsep queue pada bagian guided dari array menjadi linked list
 
 
 ```cpp
 #include <iostream>
-#include <stack>
-#include <string>
 
 using namespace std;
 
-bool isPalindrome(string input) {
-    stack<char> s;
-    int len = input.length();
+struct Node {
+    string data;
+    Node* next;
+};
 
-    for (int i = 0; i < len; i++) {
-        s.push(input[i]);
+Node* front = NULL;
+Node* back = NULL;
+
+bool isFull() {
+    return false;
+}
+
+bool isEmpty() {
+    if (front == NULL && back == NULL) {
+        return true;
+    } else {
+        return false;
     }
+}
 
-    for (int i = 0; i < len; i++) {
-        if (s.top() != input[i]) {
-            return false;
+void enqueueAntrian(string data) {
+    Node* newNode = new Node();
+    newNode->data = data;
+    newNode->next = NULL;
+
+    if (isFull()) {
+        cout << "Antrian Penuh" << endl;
+    } else {
+        if (isEmpty()) {
+            front = newNode;
+            back = newNode;
+        } else {
+            back->next = newNode;
+            back = newNode;
         }
-        s.pop();
+    }
+}
+
+void dequeueAntrian() {
+    if (isEmpty()) {
+        cout << "Antrian kosong" << endl;
+    } else {
+        Node* temp = front;
+        front = front->next;
+        delete temp;
+    }
+}
+
+int countQueue() {
+    int count = 0;
+    Node* current = front;
+
+    while (current != NULL) {
+        count++;
+        current = current->next;
     }
 
-    return true;
+    return count;
+}
+
+void clearQueue() {
+    if (isEmpty()) {
+        cout << "Antrian kosong" << endl;
+    } else {
+        Node* current = front;
+        while (current != NULL) {
+            Node* temp = current;
+            current = current->next;
+            delete temp;
+        }
+        front = NULL;
+        back = NULL;
+    }
+}
+
+void viewQueue() {
+    if (isEmpty()) {
+        cout << "Data antrian teller: " << endl;
+        cout << "Antrian kosong" << endl;
+    } else {
+        cout << "Data antrian teller: " << endl;
+        Node* current = front;
+        int i = 1;
+        while (current != NULL) {
+            cout << i << ". " << current->data << endl;
+            current = current->next;
+            i++;
+        }
+    }
 }
 
 int main() {
-    string input;
-    cout << "Masukkan kalimat: ";
-    cin >> input;
-
-    if (isPalindrome(input)) {
-        cout << input << " adalah palindrome." << endl;
-    } else {
-        cout << input << " bukan palindrome." << endl;
-    }
-
+    enqueueAntrian("Andi");
+    enqueueAntrian("Maya");
+    viewQueue();
+    cout << "Jumlah antrian = " << countQueue() << endl;
+    dequeueAntrian();
+    viewQueue();
+    cout << "Jumlah antrian = " << countQueue() << endl;
+    clearQueue();
+    viewQueue();
+    cout << "Jumlah antrian = " << countQueue() << endl;
     return 0;
 }
 
 ```
 #### Output:
-![Screenshot 2024-05-04 135231](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/5d0b36b3-b864-465e-9e3b-8a3e4d6ee049) 
+![Screenshot 2024-05-12 201028](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/c5bf10ba-632b-4ede-8901-7e6555ef84b3)
 
-![Screenshot 2024-05-04 135238](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/62e0b531-55f5-40cb-b6be-dc007e9e9a19)
 
 
 #### Full code Screenshot:
-![Screenshot (310)](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/8b2824e1-0b52-45bc-a2d9-8f95a7a50c78)
+![Screenshot (316)](https://github.com/Avriliaviananda/Praktikum-Struktur-Data-Assignment/assets/161323061/8a48fd8b-51b7-438a-b3ca-0edc54c42c26)
 
 
-Fungsi isPalindrome:
-
-Parameter: 'input' adalah kalimat yang diinputkan.
-Fungsi ini menggunakan stack s untuk menyimpan karakter-karakter dari input.
-Setelah semua karakter input dimasukkan ke stack, program memeriksa apakah setiap karakter dari depan dan belakang sama atau tidak.
-Jika ada karakter yang tidak sama, fungsi akan segera mengembalikan false dan program akan menyadari bahwa input bukan palindrom.
-Jika semua karakter dari depan dan belakang sama, fungsi akan mengembalikan true dan program akan menyadari bahwa input adalah palindrom.
-
-pada contoh output diatas masukkan kata 'aku' maka program akan mencetak kalimat bukan palindrom e karena karakter dari depan sampai belakang tidak ada yang memiliki karakter yang sama. sedangkan contoh kalimat kedua memasukkan kata 'ana' maka program akan mencetak kalimat tersebut adalah palindrome karena karakter dari depan sampai belakang ada karakter yang sama yaitu karakter 'a'.
+Kodingan di atas adalah implementasi dari antrian (queue) menggunakan linked list di bahasa C++. Di dalam kodingan tersebut, terdapat sebuah struktur data Node yang digunakan untuk menyimpan elemen antrian. Setiap elemen antrian terdiri dari data (string) dan pointer ke elemen berikutnya. hampir sama seperti guided tetapi disini menggunakan linked list, Linked List adalah sebuah struktur data yang terdiri dari elemen-elemen yang disimpan dalam memori secara tidak berurutan. Setiap elemen memiliki pointer ke elemen berikutnya, sehingga elemen-elemen dapat diakses melalui pointer. Pada linked list, terdapat struct, struct digunakan untuk mendefinisikan tipe data yang akan digunakan untuk menyimpan data dan pointer ke elemen berikutnya. Struct memungkinkan kita untuk menggabungkan beberapa tipe data dalam satu tipe data baru.
 
 ### 2. Dari nomor 1 buatlah konsep antri dengan atribut Nama mahasiswa dan NIM Mahasiswa
 
