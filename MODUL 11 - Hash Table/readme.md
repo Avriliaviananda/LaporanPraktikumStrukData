@@ -381,7 +381,7 @@ int main() {
     cout << "1. Tambahkan data mahasiswa" << endl;
     cout << "2. Hapus data mahasiswa" << endl;
     cout << "3. Cari data mahasiswa berdasarkan NIM" << endl;
-    cout << "4. Cari data mahasiswa berdasarkan rentang nilai (80-90)" << endl;
+    cout << "4. Cari data mahasiswa berdasarkan rentang nilai " << endl;
     cout << "5. Tampilkan semua data" << endl;
     cout << "6. Keluar" << endl;
     cout << "Pilihan: ";
@@ -418,7 +418,7 @@ int main() {
       }
       case 4: {
         int nilaiAwal, nilaiAkhir;
-        cout << "Masukkan rentang nilai (80-90): ";
+        cout << "Masukkan rentang nilai: ";
         cin >> nilaiAwal >> nilaiAkhir;
         hashTable.findMahasiswaByNilai(nilaiAwal, nilaiAkhir);
         break;
